@@ -1,0 +1,167 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+  
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size: 24px;
+  font-weight: 300;
+  color: gray;
+}
+
+.header_logo{
+  color:inherit;
+  text-decoration: none;
+}
+
+.hero{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero_container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(290px, 1fr));
+  grid-gap: 20px;
+}
+
+.hero_about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero_title{
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+
+.hero-subtitle{
+  font-size: 32px;
+  font-weight: 400;
+  }
+
+.hero_links{
+    display: flex;
+  }
+.hero_link{
+    margin-right: 10px;
+    font-size: 30px;
+    color:rgb(0, 0, 0);
+    transition: color 0.3s;
+    }
+
+    .hero__link:hover {
+      color: #4facfe;
+    }
+     
+  
+.hero_box{
+    max-width: 500px;
+    justify-self: center;
+    overflow: hidden;
+
+    
+    background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+  
+    border: 10px solid #fff;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+
+    animation: ava-animate 5s infinite alternate;
+  }
+
+  .hero_bog-img{
+    animation:ava-bg 3s infinite alternate;
+  }
+
+ @media screen and (max-width: 978px) {
+  .hero{
+    padding-top: 30px ;
+  }
+  .hero_container{
+    grid-row-gap: 20px ;
+  }
+  .hero-title{
+    font-size:28px ;
+    margin-bottom: 10px;
+  }
+  .hero-subtitle {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .hero_descrition{
+    font-size: 14px;
+  }
+  .hero_about{
+    text-align: center;
+  }
+  .hero_links{
+    justify-content: center;
+  }
+  .hero_box{
+    max-width: 350px;
+  }
+ }
+
+  @keyframes ava-animate {
+    0%{
+      border-radius:46% 54% 15% 85% / 43% 62% 38% 57%  ;
+    }
+    40%{
+      border-radius: 62% 38% 75% 25% / 23% 90% 10% 77%  ;
+    }
+    60%{
+      border-radius: 73% 27% 66% 34% / 12% 28% 72% 88% ;
+    }
+    100%{
+      border-radius:62% 38% 75% 25% / 43% 62% 38% 57%;
+    }
+  }
+
+  @keyframes ava-bg{
+    from{
+      backdrop-filter:hue-rotate(0);
+    }
+    to {
+      backdrop-filter:hue-rotate(90deg);
+    }
+  }
+
+
+
+
+
+
